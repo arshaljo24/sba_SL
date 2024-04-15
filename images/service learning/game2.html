@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ST. BENEDICTS PRE SCHOOL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+    
+        <link rel="stylesheet" href="css/aos.css">
+    
+        <link rel="stylesheet" href="css/ionicons.min.css">
+        
+        <link rel="stylesheet" href="css/flaticon.css">
+        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <div class="btn-container">
+            <p><a href="index.html" class="btn btn-primary py-3 px-4">GO BACK</a></p>
+        </div>
+<title>Fill in the Blanks Game</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .btn-container {
+        text-align: left;
+    }
+    .word-game {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3vw;
+            color: #333;
+
+        }
+        .letter-1 { color: #ff0000; } /* Red */
+        .letter-2 { color: #ff8c00; } /* Orange */
+        .letter-3 { color: #ffef00; } /* Yellow */
+        .letter-4 { color: #008000; } /* Green */
+        .letter-5 { color: #0000ff; } /* Blue */
+        .letter-6 { color: #4b0082; } /* Indigo */
+        .letter-7 { color: #800080; } /* Violet */
+    #hint {
+        margin-top: 20px;
+    }
+    #score {
+            font-size: 24px;
+            color: #333;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #word {
+            font-size: 36px;
+            color: #333;
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        #wordContainer {
+            margin-bottom: 20px;
+        }
+        #wordContainer p {
+            margin-bottom: 10px;
+        }
+    /* Button style */
+    .game-button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px; /* Adjusted padding */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px; /* Adjusted font size */
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition-duration: 0.4s;
+    }
+    /* Hover effect */
+    .game-button:hover {
+        background-color: #45a049; /* Darker green */
+    }
+    /* Input box style */
+    .guess-input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }
+    /* Focus effect */
+    .guess-input:focus {
+        border-color: #4CAF50; /* Green */
+    }
+</style>
+</head>
+<body>
+<!-- <h1>Word Game</h1> -->
+<h1 class="word-game">
+    <span class="letter-1">W</span>
+    <span class="letter-2">o</span>
+    <span class="letter-3">r</span>
+    <span class="letter-4">d</span>
+    <span class="letter-5">&nbsp; </span> <!-- Space -->
+    <span class="letter-6">G</span>
+    <span class="letter-7">a</span>
+    <span class="letter-1">m</span>
+    <span class="letter-2">e</span>
+</h1>
+<div id="wordContainer">
+    <p style="font-size: 20px; color: #ffffff; font-weight: bold; margin-bottom: 10px;">Fill in the blanks:</p>
+    <p id="word"></p>
+</div>
+<div id="hint" style="font-size: 15px; color: #ffffff; font-weight: bold; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif; font-style: italic;">
+    <p></p>
+    <img src="" alt="" width="150">
+</div>
+<input type="text" id="guessInput" class="guess-input" placeholder="Type your guess here..." onfocus="clearPlaceholder()">
+<br>
+<button class="game-button" onclick="checkGuess()">Submit Guess</button>
+<button class="game-button" onclick="nextWord()">Next Word</button>
+<button class="game-button" onclick="exitGame()">Exit Game</button>
+<p id="message"></p>
+<p id="score">Score: 0</p>
+<script>
+    function clearPlaceholder() {
+        document.getElementById('guessInput').placeholder = '';
+    }
+
+    const words = [
+        { word: "Apple", hint: "It's a Fruit", image: "images/apple.png" },
+        { word: "Blue", hint: "It's a Colour", image: "images/blue.png" },
+        { word: "Orange", hint: "It's a Fruit", image: "images/orange.png" },
+        { word: "Yellow", hint: "It's a Colour", image: "images/yellow.png" },
+        { word: "Elephant", hint: "It's an Animal", image: "images/elephant.png" },
+        { word: "Banana", hint: "It's a Fruit", image: "images/banana.png" },
+        { word: "Green", hint: "It's a Colour", image: "images/green.png" },
+        { word: "Dog", hint: "It's an Animal", image: "images/dog.png" },
+        { word: "Grape", hint: "It's a Fruit", image: "images/grape.png" },
+        { word: "Cat", hint: "It's an Animal", image: "images/cat.png" },
+        { word: "Monkey", hint: "It's an Animal", image: "images/monkey.png" },
+        { word: "Red", hint: "It's a Colour", image: "images/red.png" },
+        { word: "Rainbow", hint: "It has 7 Colours", image: "images/rainbow.png" }
+        // Add more words as needed
+    ];
+    
+    let currentWordIndex = 0;
+    let score = 0;
+
+    function displayWord() {
+        const currentWord = words[currentWordIndex];
+        const wordLength = currentWord.word.length;
+        const firstLetter = currentWord.word.charAt(0);
+        const lastLetter = currentWord.word.charAt(wordLength - 1);
+        let maskedWord = firstLetter + ' ';
+        for (let i = 1; i < wordLength - 1; i++) {
+        maskedWord += '_ ';
+        }
+        maskedWord += lastLetter;
+        
+        document.getElementById('word').textContent = maskedWord;
+        document.getElementById('hint').innerHTML = `<p>Hint: ${currentWord.hint}</p><img src="${currentWord.image}" alt="${currentWord.word}" width="150">`;
+    }
+    
+    function nextWord() {
+        currentWordIndex++;
+        if (currentWordIndex >= words.length) {
+            alert("You've completed the words.");
+            finalizeScore();
+            resetGame();
+        } else {
+            //shuffleArray(words);
+            displayWord();
+            document.getElementById('message').textContent = '';
+        }
+    }
+
+    // Function to shuffle the array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    function exitGame() {
+        if (confirm("Are you sure you want to exit?")) {
+            resetGame();
+            window.location.href = "index.html";
+        }
+    }
+    
+    function resetGame() {
+        currentWordIndex = 0;
+        score = 0;
+        displayWord();
+        document.getElementById('guessInput').value = '';
+        document.getElementById('message').textContent = '';
+        document.getElementById('score').textContent = 'Score: 0';
+    }
+    
+    function checkGuess() {
+        const currentWord = words[currentWordIndex];
+        const userGuess = document.getElementById('guessInput').value.trim().toLowerCase();
+        const messageElement = document.getElementById('message');
+        
+        if (userGuess === currentWord.word.toLowerCase()) {
+            messageElement.textContent = 'Congratulations! You guessed the word correctly!';
+            score++;
+            document.getElementById('score').textContent = `Score: ${score}`;
+            alert('Congratulations! You guessed the word correctly.');
+                setTimeout(function() {
+                nextWord(); // Redirect to the next question after a delay
+            }, 500); // Delay
+            document.getElementById('guessInput').value = '';
+        } else {
+            alert('Wrong! Try again.');
+            messageElement.textContent = 'Oops! Try again.';
+            document.getElementById('guessInput').value = '';
+        }
+    }
+
+    function finalizeScore() {
+        if (score > words.length / 2) {
+            alert("Congratulations! You've won!");
+        } else {
+            alert("Oops! You didn't guess more than half of the words correctly. Better luck next time!");
+        }
+    }
+    
+    displayWord(); // Display the first word when the page loads
+</script>
+</body>
+</html>

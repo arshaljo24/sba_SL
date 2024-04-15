@@ -1,0 +1,98 @@
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		
+		<div class="container" style="align-content: center;">
+			<div class="row d-flex justify-content-center">
+				<div id="principalNoteSlider" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="col-md-6 col-lg-5 d-flex justify-content-end align-items-center">
+								<div class="img-about img d-flex align-items-stretch" style="width: 450px; height: 400px;">
+									<div class="overlay"></div>
+									<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(/images/princi.jpg); background-size: cover; background-position: center;"></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-7 pr-lg-5 pb-5">
+								<div class="row justify-content-start pb-3">
+									<div class="col-md-12 heading-section ftco-animate">
+										<h2 class="mb-4">PRINCIPAL'S NOTE</h2>
+										<p>St. Benedict’s CBSE Primary School, is affiliated to Bangalore University and is managed by Asirvanam Benedictine Fathers, Bangalore. It is a beautiful campus, gifted by natural greenery and beauty. St. Benedict’s Academy is growing by launching UG and PG courses. The Benedictine campus provides a serene and ideal ambiance for the teaching-learning process. The Academy strives to fulfill its mission to provide educational opportunities to all aspiring youth to excel in life by developing academic excellence, fostering values, creating civic responsibility and building global competencies in a dynamic environment.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item">
+							<div class="col-md-6 col-lg-5 d-flex justify-content-end">
+								<div class="img-about img d-flex align-items-stretch" style="width: 450px; height: 400px;">
+									<div class="overlay"></div>
+									<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(/images/princi.jpg); background-size: cover; background-position: center;"></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-7 pr-lg-5 pb-5">
+								<div class="row justify-content-start pb-3">
+									<div class="col-md-12 heading-section ftco-animate">
+										<h2 class="mb-4">PRINCIPAL'S NOTE</h2>
+										<p>St. Benedict’s CBSE Primary School, is affiliated to Bangalore University and is managed by Asirvanam Benedictine Fathers, Bangalore. It is a beautiful campus, gifted by natural greenery and beauty. St. Benedict’s Academy is growing by launching UG and PG courses. The Benedictine campus provides a serene and ideal ambiance for the teaching-learning process. The Academy strives to fulfill its mission to provide educational opportunities to all aspiring youth to excel in life by developing academic excellence, fostering values, creating civic responsibility and building global competencies in a dynamic environment.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#principalNoteSlider" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#principalNoteSlider" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+				
+							<ul class="about-info mt-4 px-md-0 px-2">
+								<h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">St. Benedict’s School</h1>
+								<li class="d-flex"><span>Address:</span> <span>Asirvanam <br> Anchepalya<br>Kumbalgodu Post <br> Bangalore</span></li>
+								<li class="d-flex"><span>Zip code:</span> <span>560074</span></li>
+								<li class="d-flex"><span>Email:</span> <span>info@stbenedictsacademybangalore.com</span></li>
+								<li class="d-flex"><span>Phone: </span> <span> +91-9886812398</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="counter-wrap ftco-animate d-flex mt-md-3">
+						<div class="text">
+							<p class="mb-4">
+							</p>
+							<p><a href="#contact-section" class="btn btn-primary py-3 px-3">CONTACT US</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	
+		<div class="container" style="align-content: center;">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 col-lg-5 d-flex">
+					<div class="img-about img d-flex align-items-stretch" style="width: 450px; height: 400px;">
+						<div class="overlay"></div>
+						<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(/images/princi.jpg); background-size: cover; background-position: center;">
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+					<div class="row justify-content-start pb-3">
+						<div class="col-md-12 heading-section ftco-animate">
+							<h2 class="mb-4">PRINCIPAL'S NOTE</h2>
+							<p>St. Benedict’s CBSE Primary School , is affiliated to Bangalore University and is managed by Asirvanam Benedictine Fathers, Bangalore. It is a beautiful campus, gifted by natural greenery and beauty.
+								St. Benedict’s Academy is growing by launching UG and PG courses. The Benedictine campus provides a serene and ideal ambiance for the teaching-learning process. The Academy strives to fulfill its mission to provide educational opportunities to all aspiring youth to excel in life by developing academic excellence, fostering values, creating civic responsibility and building global competencies in a dynamic environment.</p>

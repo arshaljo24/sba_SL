@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<title>ST. BENEDICTS PRE SCHOOL</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" href="images/photo5-removebg-preview.png" type="image/png">
+
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<div class="btn-container">
+		<p><a href="index.html" class="btn btn-primary py-3 px-4">GO BACK</a></p>
+	</div>
+	
+
+</head>
+<body>
+	<audio preload="auto">
+		<source id="oggSource" src="sounds/ogg/like-glass.ogg" type="audio/ogg">
+		<source id="mp3Source" src="sounds/mp3/like-glass.mp3" type="audio/mp3">
+		Oops! Looks like you're using an old browser, try using a modern browser like Google Chrome, Firefox or even Safari.
+	</audio>
+	<div class="main-cont">
+
+		<div id="about-cont">
+			<div class="content-wrapper">
+				<div class="about-white-bg">
+					<h3 class="about-title" style="font-weight: bold; color: #b9b6b6; text-align: center;">A simple game to learn the English alphabets</h3>
+					<img src="images/alphabets_prev_ui.png" alt="Alphabets Image" style="display: block; margin: 0 auto;">
+					<hr>
+					<div class="about-image"></div>
+					<hr>
+				</div>
+			</div>
+		</div>
+		<div class="char-cont">
+			<div style="display: flex; align-items: center; justify-content: center;">
+				<p id="big-char" class="char animationHabibi" style="font-weight: bold; font-size: 48px; text-align: center;">
+					Type any letter
+				</p>
+			</div>
+			
+			
+			<div style="display: flex; justify-content: space-between;">
+				<button id="show-keyboard-button" class="btn btn-primary py-3 px-4" type="button" name="button">Show keyboard</button>
+				<button id="mute-button" class="btn btn-white btn-outline-white py-3 px-4" type="button" name="button">Mute Sounds</button>
+			</div>
+			<p style="text-align: left; font-size: 12px;" >**Show Keyboard function only available for mobile device.</p>
+		</div>
+	</div>
+	<script src="js/habibiScript.js"></script>
+ 
+	<script>
+		function handleInput(event) {
+			const input = event.target.value;
+			const bigChar = document.getElementById('big-char');
+			if (input.length === 1) {
+				bigChar.textContent = input;
+				event.target.value = ''; // Clear the input box
+			}
+		}
+	</script>
+
+  
+
+
+</body>
+</html>
